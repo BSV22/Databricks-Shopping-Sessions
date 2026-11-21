@@ -10,4 +10,6 @@ Then copy target/release/generate onto your PATH so the starter's `make dev` fin
 To build and run it with Docker:
 
     docker build -t shopping-sessions-generator .
-    docker run --rm -v "$PWD/dev:/data/dev" shopping-sessions-generator --seed 1 --events 1000000 --clicks 250000 --output /data/dev
+    docker run --rm -v "$PWD/dev:/data/dev" shopping-sessions-generator
+
+The image defaults to the public dev set (`--seed 1 --events 1000000 --clicks 250000 --output /data/dev`). Pass arguments after the image name to override these defaults.
